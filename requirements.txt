@@ -5,3 +5,8 @@ openai==0.28
 jinja2
 python-multipart
 python-dotenv
+invisible_watermark 
+transformers 
+accelerate 
+diffusers --upgrade
+

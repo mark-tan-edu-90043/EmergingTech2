@@ -1,18 +1,29 @@
-<!-- templates/form.html -->
 <html>
   <head>
     <title>FastAPI Form Example</title>
+    <style>
+      .loading {
+        display: none;
+      }
+    </style>
   </head>
   <body>
     <h1>Prompt a Model</h1>
-    <form method="post">
+    <form id="promptForm" method="post" onsubmit="showLoading()">
       <label for="prompt">Enter a prompt:</label>
       <input type="text" id="prompt" name="prompt" required />
       <button type="submit">Submit</button>
+      <div id="loading" class="loading">Loading...</div>
     </form>
-    {% if response %}
-    <h2>Response:</h2>
-    <p>{{ response }}</p>
+    {% if image %}
+    <h2>Generated Image:</h2>
+    <img id="generatedImage" src="data:image/png;base64,{{ image }}" />
     {% endif %}
+
+    <script>
+      function showLoading() {
+        document.getElementById("loading").style.display = "block";
+      }
+    </script>
   </body>
 </html>

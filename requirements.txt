@@ -2,6 +2,7 @@ requests
 responses
 fastapi
 openai==0.28
+uvicorn
 jinja2
 python-multipart
 python-dotenv
@@ -9,4 +10,3 @@ invisible_watermark
 transformers 
 accelerate 
 diffusers --upgrade
-

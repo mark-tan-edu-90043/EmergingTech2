@@ -2,13 +2,17 @@
 
 This is a FastAPI application that demonstrates basic usage.
 
+Uses https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0
+
+Can otherwise use https://huggingface.co/runwayml/stable-diffusion-v1-5 for better performance/load times, but worse image generation.
+
 ## Installation
 
 ### 1. Clone the repository:
 
 ```bash
-git clone https://github.com/OAkinbode/ET-AIModel.git
-cd ET-AIModel
+git clone https://github.com/mark-tan-edu-90043/EmergingTech2.git
+cd EmergingTech2
 
 ```
 
@@ -20,14 +24,18 @@ or
 
 pip3 install -r requirements.txt
 
+or if everything fails
+
+pip3 install -r requirements.txt --user
+
 ### 3. Run the application using
 
-uvicorn app.main:app --reload
+python -m uvicorn app.main:app --reload
 
 ### 4. Use application in browser
 
 visit http://localhost:8000
 
-### 5. isadfisadhn
+### 5. Generate a cool image
 
-???
+Loading times may vary

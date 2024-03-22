@@ -3,9 +3,9 @@ import torch
 import base64
 
 def promptResponse(prompt) -> str:
-    model_id = "stabilityai/stable-diffusion-xl-base-1.0"
+    # model_id = "stabilityai/stable-diffusion-xl-base-1.0"
 
-    # model_id = "runwayml/stable-diffusion-v1-5" # Uncommnt this to use Stable Diffusion 1.5, if the XL Model is too large.
+    model_id = "runwayml/stable-diffusion-v1-5" # Uncommnt this to use Stable Diffusion 1.5, if the XL Model is too large.
 
 
     pipe = DiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float16, use_safetensors=True, variant="fp16")
